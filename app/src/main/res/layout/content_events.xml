@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="in.shadowsoft.visitor.Events"
+    tools:showIn="@layout/app_bar_events">
+
+
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view_Events"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15sp"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardElevation="15dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/event_title"
+                android:textColor="@android:color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Upcoming events"
+                android:textStyle="bold"
+                android:paddingLeft="10dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:textSize="16dp"
+                />
+            <HorizontalScrollView
+                android:id="@+id/upcoming_nav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5sp"
+                    android:paddingRight="5sp">
+                    <Button
+                        android:layout_margin="5sp"
+                        android:padding="5sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Today"
+                        android:textColor="@android:color/black"
+                        android:textAllCaps="false"
+                        android:background="@drawable/button_shape"/>
+                    <Button
+                        android:layout_margin="5sp"
+                        android:padding="5sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tomorrow"
+                        android:textColor="@android:color/black"
+                        android:textAllCaps="false"
+                        android:background="@drawable/button_shape"/>
+                    <Button
+                        android:layout_margin="5sp"
+                        android:padding="5sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Next Week"
+                        android:textColor="@android:color/black"
+                        android:textAllCaps="false"
+                        android:background="@drawable/button_shape"/>
+                    <Button
+                        android:layout_margin="5sp"
+                        android:padding="5sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Next Weekend "
+                        android:textColor="@android:color/black"
+                        android:textAllCaps="false"
+                        android:background="@drawable/button_shape"/>
+                    <Button
+                        android:layout_margin="5sp"
+                        android:padding="5sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" This Month "
+                        android:textColor="@android:color/black"
+                        android:textAllCaps="false"
+                        android:background="@drawable/button_shape"/>
+                    <Button
+                        android:layout_margin="5sp"
+                        android:padding="5sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Next Month "
+                        android:textColor="@android:color/black"
+                        android:textAllCaps="false"
+                        android:background="@drawable/button_shape"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/events_lv">
+
+            </ListView>
+
+            <Button
+                android:id="@+id/more_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="More Events"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:onClick="launch_events"/>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="in.shadowsoft.visitor.home"
+    tools:showIn="@layout/app_bar_home">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view_Events"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/event_title"
+                    android:textColor="@android:color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Upcoming events"
+                    android:textStyle="bold"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:textSize="16dp"
+                    />
+                <HorizontalScrollView
+                    android:id="@+id/upcoming_nav"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5sp"
+                    android:paddingRight="5sp">
+                    <Button
+                        android:layout_margin="5sp"
+                        android:padding="5sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Today"
+                        android:textColor="@android:color/black"
+                        android:textAllCaps="false"
+                        android:background="@drawable/button_shape"/>
+                    <Button
+                        android:layout_margin="5sp"
+                        android:padding="5sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tomorrow"
+                        android:textColor="@android:color/black"
+                        android:textAllCaps="false"
+                        android:background="@drawable/button_shape"/>
+                    <Button
+                        android:layout_margin="5sp"
+                        android:padding="5sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Next Week"
+                        android:textColor="@android:color/black"
+                        android:textAllCaps="false"
+                        android:background="@drawable/button_shape"/>
+                    <Button
+                        android:layout_margin="5sp"
+                        android:padding="5sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Next Weekend "
+                        android:textColor="@android:color/black"
+                        android:textAllCaps="false"
+                        android:background="@drawable/button_shape"/>
+                    <Button
+                        android:layout_margin="5sp"
+                        android:padding="5sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" This Month "
+                        android:textColor="@android:color/black"
+                        android:textAllCaps="false"
+                        android:background="@drawable/button_shape"/>
+                    <Button
+                        android:layout_margin="5sp"
+                        android:padding="5sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Next Month "
+                        android:textColor="@android:color/black"
+                        android:textAllCaps="false"
+                        android:background="@drawable/button_shape"/>
+                </LinearLayout>
+                </HorizontalScrollView>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="210sp">
+                    <ListView
+                        android:id="@+id/list_event"
+                        android:layout_width="match_parent"
+                        android:layout_height="210sp">
+                    </ListView>
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_marginTop="5sp"
+                        android:id="@+id/shimmer"
+                        android:scaleType="fitXY"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:lottie_rawRes="@raw/shimmer"
+                        app:lottie_loop="true"
+                        app:lottie_autoPlay="true"/>
+                </RelativeLayout>
+
+
+                <Button
+                    android:id="@+id/more_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="More Events"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@android:color/white"
+                    android:onClick="launch_events"/>
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_buy"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="20dp"
+            android:onClick="launch_buy">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:onClick="launch_buy">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@color/colorPrimary"
+                    android:layout_gravity="center">
+
+                <ImageView
+                    android:padding="25dp"
+                    android:layout_gravity="center"
+                    android:layout_width="230dp"
+                    android:layout_height="230dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_shopping_cart_white_48dp" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/info_buy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Buy Handicraft Products"
+                    android:textColor="@color/colorPrimary"
+                    android:background="#ffffff"
+                    android:layout_weight="0.5"
+                    android:onClick="launch_buy"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:onClick="launch_homestay"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardElevation="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/homestay" />
+
+            <Button
+                android:id="@+id/info_text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Explore Homestays"
+                android:textColor="@color/colorPrimary"
+                android:background="#ffffff"
+                android:onClick="launch_homestay"/>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view2"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="20dp"
+            android:onClick="launch_destination">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/planters"/>
+
+                <Button
+                    android:id="@+id/info_text2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="See Top Destinations"
+                    android:textColor="@color/colorPrimary"
+                    android:background="#ffffff"
+                    android:onClick="launch_destination"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:onClick="launch_outlet"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_viewx"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/food" />
+
+                <Button
+                    android:id="@+id/info_text23"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Food near me"
+                    android:textColor="@color/colorPrimary"
+                    android:background="#ffffff"
+                    android:onClick="launch_homestay"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardCornerRadius="10dp"
+            android:id="@+id/card_view3"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            card_view:cardElevation="20dp"
+            android:onClick="brouse_tour_pkg">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/tour"/>
+
+                <Button
+                    android:id="@+id/info_text3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:background="#ffffff"
+                    android:text="Browse Tour Packages and guides"
+                    android:onClick="brouse_tour_pkg"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
